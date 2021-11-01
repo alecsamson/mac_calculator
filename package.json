@@ -6,7 +6,10 @@
   "scripts": {
     "dev": "parcel ./index.html",
     "format": "prettier --write \"src/**/*.{js,jsx}\"",
-    "lint": "eslint \"src/**/*.{js,jsx}\" --quiet"
+    "lint": "eslint \"src/**/*.{js,jsx}\" --quiet",
+    "build": "react-scripts build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "repository": {
     "type": "git",
@@ -18,7 +21,7 @@
   "bugs": {
     "url": "https://github.com/ozusteapot/Mac_Calculator/issues"
   },
-  "homepage": "https://github.com/ozusteapot/Mac_Calculator#readme",
+  "homepage": "https://github.com/ozusteapot/Mac_Calculator",
   "devDependencies": {
     "@babel/core": "^7.12.16",
     "@babel/preset-react": "^7.12.13",
@@ -27,6 +30,7 @@
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-react": "^7.22.0",
+    "gh-pages": "^3.2.3",
     "parcel": "^1.12.3",
     "prettier": "^2.4.1"
   },
